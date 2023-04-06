@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="55" viewBox="0 0 56 55">
+  <g id="_14" data-name="14" transform="translate(0.447)">
+    <ellipse id="Ellipse_7039" data-name="Ellipse 7039" cx="28" cy="27.5" rx="28" ry="27.5" transform="translate(-0.447)" fill="#ede5f4"/>
+    <g id="baggage" transform="translate(13.625 14.005)">
+      <path id="Path_29586" data-name="Path 29586" d="M19.38,6.094H17.755a3.869,3.869,0,0,0-7.583,0H8.548A1.548,1.548,0,0,0,7,7.641V19.248A1.548,1.548,0,0,0,8.548,20.8v1.548a.774.774,0,0,0,.774.774h0a.774.774,0,0,0,.774-.774V20.8h7.738v1.548a.774.774,0,0,0,.774.774h0a.774.774,0,0,0,.774-.774V20.8h0a1.548,1.548,0,0,0,1.548-1.548V7.641A1.548,1.548,0,0,0,19.38,6.094ZM13.964,4.546a2.321,2.321,0,0,1,2.182,1.548H11.782a2.321,2.321,0,0,1,2.182-1.548Zm-5.416,14.7V7.641H19.38V19.248Z" transform="translate(0)" fill="#8654b3" stroke="#ede5f4" stroke-width="0.5"/>
+      <path id="Path_29587" data-name="Path 29587" d="M16.869,10h-3.1a.774.774,0,0,0,0,1.548h3.1a.774.774,0,1,0,0-1.548Z" transform="translate(-1.357 -1.585)" fill="#8654b3" stroke="#ede5f4" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>
