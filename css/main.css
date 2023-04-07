@@ -1430,6 +1430,39 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   opacity: 1;
 }
 
+.notifications-link {
+  fill: #2a313d;
+  position: relative;
+  text-decoration: none;
+  -webkit-margin-start: 19px;
+          margin-inline-start: 19px;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .notifications-link {
+    display: none;
+    -webkit-margin-end: 15px;
+            margin-inline-end: 15px;
+  }
+}
+.notifications-link:hover {
+  fill: #5e9d9a;
+}
+.notifications-link .count {
+  position: absolute;
+  top: 0;
+  inset-inline-start: -3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f54748;
+  color: #fff;
+  font-size: 7px;
+}
+
 .header-btn {
   display: flex;
   align-items: center;
@@ -1447,6 +1480,27 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
     width: 48px;
   }
 }
+@media (max-width: 991px) {
+  .header-btn {
+    width: auto;
+    padding: 0 10px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+.header-btn .icon {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .header-btn .icon svg {
+    width: 15px;
+  }
+}
+.header-btn .arrow {
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
+}
 .header-btn .text {
   -webkit-margin-start: 6px;
           margin-inline-start: 6px;
@@ -1456,31 +1510,120 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
     display: none;
   }
 }
-
-.header-log {
+@media (max-width: 991px) {
+  .header-btn .text {
+    display: block;
+  }
+}
+.header-log-cont .header-btn {
   padding: 0 21px;
   color: #fff;
   stroke: #fff;
   background-color: #5e9d9a;
-  -webkit-margin-start: 25px;
-          margin-inline-start: 25px;
 }
 @media (max-width: 1199px) {
-  .header-log {
-    -webkit-margin-start: 15px;
-            margin-inline-start: 15px;
+  .header-log-cont .header-btn {
     padding: 0;
   }
 }
 @media (max-width: 991px) {
-  .header-log {
-    margin: 0;
+  .header-log-cont .header-btn {
+    padding: 0 10px;
   }
 }
-.header-log:hover {
+.header-log-cont .header-btn:hover {
   background-color: rgba(94, 157, 154, 0.2);
   color: #5e9d9a;
   stroke: #5e9d9a;
+}
+.header-acc-cont .header-btn {
+  color: #5e9d9a;
+  stroke: #5e9d9a;
+  background-color: rgba(94, 157, 154, 0.2);
+}
+.header-acc-cont .header-btn:hover {
+  background-color: #5e9d9a;
+  color: #fff;
+  stroke: #fff;
+}
+
+.header-log-cont {
+  -webkit-margin-start: 25px;
+          margin-inline-start: 25px;
+}
+@media (max-width: 1199px) {
+  .header-log-cont {
+    -webkit-margin-start: 15px;
+            margin-inline-start: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .header-log-cont {
+    margin: 0;
+  }
+}
+
+.header-acc-cont {
+  position: relative;
+  -webkit-margin-start: 15px;
+          margin-inline-start: 15px;
+}
+@media (max-width: 991px) {
+  .header-acc-cont {
+    margin: 0;
+  }
+}
+.header-acc-cont .acc-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  inset-inline-end: 0;
+  width: 100%;
+  min-width: 140px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 8px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.header-acc-cont .acc-list hr {
+  margin: 0 6px;
+  border-color: #ebeef2;
+  opacity: 1;
+}
+.header-acc-cont .acc-list .acc-link {
+  width: auto;
+  background-color: rgba(94, 157, 154, 0);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #2a313d;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 8px;
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.header-acc-cont .acc-list .acc-link:hover {
+  color: #5e9d9a;
+  background-color: rgba(94, 157, 154, 0.16);
+}
+.header-acc-cont .acc-list .acc-link.active {
+  color: #5e9d9a;
+  background-color: rgba(94, 157, 154, 0.16);
+}
+.header-acc-cont:hover .header-btn {
+  background-color: #5e9d9a;
+  color: #fff;
+  stroke: #fff;
+}
+.header-acc-cont:hover .acc-list {
+  visibility: visible;
+  opacity: 1;
 }
 
 .menu-btn {
