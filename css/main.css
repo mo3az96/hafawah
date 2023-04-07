@@ -780,11 +780,21 @@ input[type=number] {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .map-cont {
+    height: 385px;
+  }
+}
 
 .gm-ui-hover-effect {
   inset: unset !important;
   top: -5px !important;
   inset-inline-end: -5px !important;
+}
+@media (max-width: 767px) {
+  .gm-ui-hover-effect > span {
+    background-color: #5e9d9a;
+  }
 }
 
 .gm-style .gm-style-iw-c,
@@ -807,6 +817,13 @@ input[type=number] {
   -webkit-padding-end: 0;
           padding-inline-end: 0;
 }
+@media (max-width: 767px) {
+  .map-branch {
+    flex-direction: column;
+    padding: 5px;
+    width: 150px;
+  }
+}
 .map-branch .branch-img {
   width: 112px;
   height: 95px;
@@ -820,8 +837,19 @@ input[type=number] {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 767px) {
+  .map-branch .branch-img {
+    width: 100%;
+    height: auto;
+  }
+}
 .map-branch .branch-info {
   padding: 0 12px;
+}
+@media (max-width: 767px) {
+  .map-branch .branch-info {
+    padding: 5px 0 0;
+  }
 }
 .map-branch .branch-title {
   font-size: 12px;
@@ -857,8 +885,11 @@ input[type=number] {
   background-color: #5e9d9a;
   font-size: 11px;
   font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 .map-branch .branch-directions svg {
+  display: flex;
+  align-items: center;
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
 }
@@ -874,6 +905,13 @@ input[type=number] {
   flex-shrink: 0;
   background-color: rgba(94, 157, 154, 0.2);
   fill: #5e9d9a;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .map-branch .branch-phone {
+    -webkit-margin-start: 5px;
+            margin-inline-start: 5px;
+  }
 }
 .map-branch .branch-phone:hover {
   background-color: #5e9d9a;
