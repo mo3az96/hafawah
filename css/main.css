@@ -1612,6 +1612,9 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   color: #5e9d9a;
   background-color: rgba(94, 157, 154, 0.16);
 }
+.header-acc-cont .acc-list .acc-link:last-of-type {
+  color: #f54748;
+}
 .header-acc-cont .acc-list .acc-link.active {
   color: #5e9d9a;
   background-color: rgba(94, 157, 154, 0.16);
