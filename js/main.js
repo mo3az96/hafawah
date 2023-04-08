@@ -333,6 +333,18 @@ $(document).ready(function () {
         otp_fields.eq(index).val(value);
       });
     });
+
+  /************************************ FAQ ************************************/
+  $(".faq-head").click(function () {
+    $(".faq-head").not(this).removeClass("active");
+    $(this).toggleClass("active");
+    if ($(this).siblings().css("display") == "none") {
+      $(this).siblings().slideDown(500);
+    } else {
+      $(this).siblings().slideUp(500);
+    }
+    $(".faq-head").not(this).siblings().slideUp(500);
+  });
 });
 
 function startTimer(duration) {
