@@ -153,31 +153,16 @@ $(document).ready(function () {
   });
 
   /************************************ mixitup ************************************/
-  var mixer = mixitup("#mixitup-elements", {
-    animation: {
-      duration: 250,
-      nudge: true,
-      reverseOut: true,
-      effects: "scale(0.01)",
-    },
-  });
-
-  /************************************ Room Imgs ************************************/
-  var owl = $(".imgs-slider");
-  owl.owlCarousel({
-    loop: true,
-    nav: true,
-    navText: [
-      '<svg id="Group_27121" data-name="Group 27121" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M7.13,9.946l-5.805-5.8a.484.484,0,1,0-.684.684l5.273,5.393c-2.244,2.324-.051.029-5.273,5.532a.484.484,0,0,0,.685.684l5.805-5.8a.484.484,0,0,0,0-.684Z" transform="translate(12.502 6)" /></svg>',
-      '<svg id="Group_27120" data-name="Group 27120" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"> <path d="M.641,9.946l5.8-5.8a.484.484,0,0,1,.684.684L1.857,10.219c2.244,2.324.051.029,5.273,5.532a.484.484,0,0,1-.685.684l-5.8-5.8a.484.484,0,0,1,0-.684Z" transform="translate(12.502 6)"/></svg>',
-    ],
-    margin: 23,
-    rtl: document.dir == "rtl" ? true : false,
-    items: 1,
-  });
-  owl.on("initialize.owl.carousel", function (event) {
-    lazyLoad();
-  });
+  if ($("#mixitup-elements").length) {
+    var mixer = mixitup("#mixitup-elements", {
+      animation: {
+        duration: 250,
+        nudge: true,
+        reverseOut: true,
+        effects: "scale(0.01)",
+      },
+    });
+  }
 
   /************************************ Rooms Slider ************************************/
   var roomsSwiper = new Swiper(".rooms-sec-cont .swiper", {
@@ -247,6 +232,23 @@ $(document).ready(function () {
     },
   });
 
+  /************************************ Room Imgs ************************************/
+  var owl = $(".imgs-slider");
+  owl.owlCarousel({
+    loop: true,
+    nav: true,
+    navText: [
+      '<svg id="Group_27121" data-name="Group 27121" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M7.13,9.946l-5.805-5.8a.484.484,0,1,0-.684.684l5.273,5.393c-2.244,2.324-.051.029-5.273,5.532a.484.484,0,0,0,.685.684l5.805-5.8a.484.484,0,0,0,0-.684Z" transform="translate(12.502 6)" /></svg>',
+      '<svg id="Group_27120" data-name="Group 27120" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"> <path d="M.641,9.946l5.8-5.8a.484.484,0,0,1,.684.684L1.857,10.219c2.244,2.324.051.029,5.273,5.532a.484.484,0,0,1-.685.684l-5.8-5.8a.484.484,0,0,1,0-.684Z" transform="translate(12.502 6)"/></svg>',
+    ],
+    margin: 23,
+    rtl: document.dir == "rtl" ? true : false,
+    items: 1,
+  });
+  owl.on("initialize.owl.carousel", function (event) {
+    lazyLoad();
+  });
+
   /************************************ Footer ************************************/
   if ($(window).width() <= 767) {
     $(".footer-title").click(function () {
@@ -260,4 +262,28 @@ $(document).ready(function () {
       $(".footer-title").not(this).siblings().slideUp(500);
     });
   }
+
+  /************************************ Footer ************************************/
+  function formatState(state) {
+    if (!state.id) {
+      return state.text;
+    }
+    var baseUrl = "images/flags";
+    var $state = $(
+      '<span class="country-item"><img src="' +
+        baseUrl +
+        "/" +
+        state.element.value.toLowerCase() +
+        '.svg" class="img-flag" /> ' +
+        state.text +
+        "</span>"
+    );
+    return $state;
+  }
+
+  $(".country-select").select2({
+    templateResult: formatState,
+    templateSelection: formatState,
+    minimumResultsForSearch: Infinity,
+  });
 });
