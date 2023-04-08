@@ -2462,7 +2462,6 @@ header.fixed .logo {
 .page-sec {
   padding: 30px 0 45px;
   background-color: #edf4f2;
-  min-height: 744px;
 }
 @media (max-width: 767px) {
   .page-sec {
@@ -2962,6 +2961,94 @@ header.fixed .logo {
   font-size: 16px;
   color: #767676;
   margin: 0;
+}
+
+.info-block {
+  border: 1px solid #d3d4e0;
+  box-shadow: none;
+  padding: 40px 40px 30px;
+}
+@media (max-width: 991px) {
+  .info-block {
+    padding: 25px 15px;
+  }
+}
+
+.info-desc {
+  margin-bottom: 40px;
+}
+.info-desc h2 {
+  font-size: 24px;
+  color: #2a313d;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+.info-desc h3 {
+  font-size: 20px;
+  color: #2a313d;
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+.info-desc h5 {
+  font-size: 16px;
+  color: #2a313d;
+  font-weight: 500;
+  margin: 0 0 35px;
+}
+.info-desc h6 {
+  font-size: 14px;
+  color: #2a313d;
+  font-weight: 700;
+  margin: 0 0 35px;
+}
+.info-desc p {
+  font-size: 16px;
+  color: #767676;
+  line-height: 1.9375;
+  margin-bottom: 16px;
+}
+.info-desc ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 16px;
+  line-height: 1.875;
+}
+.info-desc ul li {
+  font-size: 16px;
+  color: #2a313d;
+}
+.info-desc :last-child {
+  margin: 0;
+}
+
+.info-btn-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-btn {
+  width: auto;
+  padding: 0 30px;
+  height: 56px;
+  background-color: #5e9d9a;
+  border-radius: 30px;
+  color: #fff;
+  fill: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.info-btn svg {
+  -webkit-margin-end: 27px;
+          margin-inline-end: 27px;
+}
+.info-btn:hover {
+  background-color: rgba(94, 157, 154, 0.2);
+  color: #5e9d9a;
+  fill: #5e9d9a;
 }
 
 footer {
