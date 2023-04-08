@@ -286,6 +286,9 @@ $(document).ready(function () {
     templateSelection: formatState,
     minimumResultsForSearch: Infinity,
   });
+  $(".custom-select").select2({
+    minimumResultsForSearch: Infinity,
+  });
 
   $(".password-eye").click(function () {
     var input = $(this).siblings("input");
