@@ -311,7 +311,7 @@ input[type=number] {
 }
 .form-group .error {
   font-size: 12px;
-  color: #f00;
+  color: #F54748;
 }
 
 .custom-label {
@@ -323,6 +323,18 @@ input[type=number] {
 
 .input-cont {
   position: relative;
+}
+
+.form-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+@media (max-width: 767px) {
+  .form-line {
+    grid-template-columns: 1fr;
+    gap: unset;
+  }
 }
 
 .custom-input {
@@ -337,6 +349,12 @@ input[type=number] {
   padding: 0 15px;
   transition: all 0.3s ease-in-out;
 }
+html[dir=rtl] .custom-input {
+  text-align: right;
+}
+html[dir=ltr] .custom-input {
+  text-align: left;
+}
 .custom-input::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -347,20 +365,11 @@ input[type=number] {
   font-size: 14px;
   color: #86959f;
 }
-html[dir=rtl] .custom-input::-moz-placeholder {
-  text-align: right;
-}
-html[dir=rtl] .custom-input::placeholder {
-  text-align: right;
-}
-html[dir=ltr] .custom-input::-moz-placeholder {
-  text-align: left;
-}
-html[dir=ltr] .custom-input::placeholder {
-  text-align: left;
-}
 .has_error .custom-input {
-  border-color: #f00;
+  border-color: #F54748;
+}
+.valid .custom-input {
+  border-color: #4caf50;
 }
 .custom-input:focus {
   border-color: #5e9d9a;
@@ -385,6 +394,41 @@ html[dir=rtl] select.custom-input {
 }
 html[dir=ltr] select.custom-input {
   background-position: right 15px top 50%;
+}
+
+.validate {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset-inline-end: 16px;
+}
+.validate a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5e9d9a;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.validate a:hover {
+  color: #2a313d;
+}
+.validate p {
+  display: flex;
+  align-items: center;
+  color: #4caf50;
+  margin: 0;
+}
+.validate p span {
+  -webkit-margin-start: 8px;
+          margin-inline-start: 8px;
+}
+@media (max-width: 767px) {
+  .validate p span {
+    display: none;
+  }
 }
 
 .input-ico {
@@ -445,6 +489,9 @@ html[dir=rtl] .country-key ~ .custom-input {
 html[dir=ltr] .country-key ~ .custom-input {
   padding-right: 110px;
 }
+.country-key ~ .validate {
+  inset-inline-end: 110px;
+}
 
 .form-tools {
   display: flex;
@@ -459,9 +506,13 @@ html[dir=ltr] .country-key ~ .custom-input {
   }
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+}
 .checkbox label {
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 .checkbox .mark {
@@ -471,7 +522,7 @@ html[dir=ltr] .country-key ~ .custom-input {
   align-items: center;
   justify-content: center;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 2px;
   width: 18px;
   height: 18px;
   transition: all 0.3s ease-in-out;
@@ -489,6 +540,15 @@ html[dir=ltr] .country-key ~ .custom-input {
   font-weight: 400;
   -webkit-margin-start: 9px;
           margin-inline-start: 9px;
+}
+.checkbox .text a {
+  color: #5e9d9a;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox .text a:hover {
+  color: #86959f;
+  text-decoration: underline;
 }
 .checkbox input {
   display: none;
@@ -1665,6 +1725,68 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1607843137);
 }
 
+.modal-backdrop {
+  background: linear-gradient(90deg, rgba(85, 85, 85, 0.6901960784) 0%, rgba(0, 0, 0, 0.7411764706) 100%);
+}
+.modal-backdrop.show {
+  opacity: 1;
+}
+
+.modal-content {
+  border: 1px solid #d9e0e5;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+}
+.modal-content .modal-body {
+  padding: 0;
+}
+.modal-content .modal-close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 19px;
+  inset-inline-end: 22px;
+  fill: #2a313d;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+}
+.modal-content .modal-close:hover {
+  fill: #5e9d9a;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a313d;
+  margin: 0;
+}
+
+.otp-modal-cont {
+  padding: 60px 15px 65px;
+}
+@media (max-width: 767px) {
+  .otp-modal-cont {
+    padding: 40px 10px 45px;
+  }
+}
+.otp-modal-cont .modal-title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .otp-modal-cont .modal-title {
+    margin-bottom: 25px;
+  }
+}
+
+.otp-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -2384,6 +2506,19 @@ header.fixed .logo {
   border-radius: 30px;
 }
 
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2a313d;
+  margin: 0 0 20px;
+}
+@media (max-width: 991px) {
+  .auth-title {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ log*/
 .log-cont {
   display: grid;
@@ -2399,19 +2534,6 @@ header.fixed .logo {
   .log-cont {
     grid-template-columns: 1fr;
     gap: unset;
-  }
-}
-
-.auth-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #2a313d;
-  margin: 0 0 20px;
-}
-@media (max-width: 991px) {
-  .auth-title {
-    text-align: center;
-    font-size: 24px;
   }
 }
 
@@ -2670,6 +2792,71 @@ header.fixed .logo {
   color: #2a313d;
   font-size: 20px;
   margin: 20px 0 0;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ reg*/
+.reg-block {
+  position: relative;
+}
+.reg-block::before {
+  width: 1px;
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  background-color: #d9e0e5;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+}
+@media (max-width: 1199px) {
+  .reg-block::before {
+    display: none;
+  }
+}
+
+.reg-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 68px;
+}
+@media (max-width: 1199px) {
+  .reg-cont {
+    gap: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .reg-cont {
+    grid-template-columns: 1fr;
+    gap: unset;
+  }
+}
+
+.reg-inline-start {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+@media (max-width: 991px) {
+  .reg-inline-start {
+    height: auto;
+  }
+}
+
+.reg-image {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .reg-image {
+    display: none;
+  }
+}
+
+.reg-inline-end {
+  max-width: 100%;
 }
 
 footer {

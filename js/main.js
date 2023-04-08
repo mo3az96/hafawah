@@ -303,6 +303,11 @@ $(document).ready(function () {
     startTimer($(".otp-cont").data("duration"));
   });
 
+  $(".otp-modal-btn").click(function (e) {
+    $(".otp-modal-block *:input:first").focus();
+    startTimer($(".otp-modal-block").data("duration"));
+  });
+
   let otp_fields = $(".otp-inputs .otp-field");
   otp_fields
     .on("input", function (e) {
