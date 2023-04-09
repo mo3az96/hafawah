@@ -3102,7 +3102,7 @@ header.fixed .logo {
 @media (max-width: 767px) {
   .contact-title {
     font-size: 22px;
-    text-align: center;
+    margin-bottom: 25px;
   }
 }
 
@@ -3111,6 +3111,12 @@ header.fixed .logo {
   font-weight: 400;
   color: #86959f;
   margin: 0 0 49px;
+}
+@media (max-width: 767px) {
+  .contact-subtitle {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
 }
 
 .contact-info {
@@ -3761,7 +3767,7 @@ html[dir=ltr] .footer-list a:hover {
     font-size: 16px;
     font-weight: 500;
   }
-  .header-list a:after {
+  .header-list a:before {
     display: none;
   }
   .header-list a.active {
