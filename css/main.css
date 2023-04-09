@@ -4159,6 +4159,7 @@ header.fixed .logo {
 @media (max-width: 767px) {
   .rooms-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
 .rooms-grid .grid-item {
