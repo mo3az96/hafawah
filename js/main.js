@@ -406,6 +406,16 @@ $(document).ready(function () {
     $(".rooms-grid").addClass("list");
     $(".imgs-slider").trigger("refresh.owl.carousel");
   });
+  $(".filter-btn").click(function (e) {
+    $(".archive-filters").addClass("active");
+    $(".filter-overlay").fadeIn();
+    $("body").addClass("overflow");
+  });
+  $(".filter-overlay").click(function (e) {
+    $(".archive-filters").removeClass("active");
+    $(".filter-overlay").fadeOut();
+    $("body").removeClass("overflow");
+  });
 });
 
 function startTimer(duration) {

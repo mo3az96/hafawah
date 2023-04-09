@@ -4133,6 +4133,32 @@ header.fixed .logo {
   fill: #fff;
 }
 
+.filter-btn {
+  flex-shrink: 0;
+  display: none;
+}
+@media (max-width: 991px) {
+  .filter-btn {
+    display: flex;
+  }
+}
+.filter-btn svg {
+  width: 20px;
+}
+
+.filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(85, 85, 85, 0.69) 0%, rgba(0, 0, 0, 0.741) 100%);
+  opacity: 1;
+  z-index: 998;
+  display: block;
+  display: none;
+}
+
 .archive-filters {
   padding: 30px 16px;
   background-color: #fff;
@@ -4142,8 +4168,40 @@ header.fixed .logo {
 }
 @media (max-width: 991px) {
   .archive-filters {
-    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    z-index: 999;
+    overflow-y: auto;
+    padding: 20px 15px;
+    -webkit-padding-end: 10px;
+            padding-inline-end: 10px;
+    inset-inline-end: -270px;
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1607843137);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
   }
+  .archive-filters.active {
+    opacity: 1;
+    visibility: visible;
+    inset-inline-end: 0;
+  }
+}
+.archive-filters .filters-cont {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.archive-filters .filters-cont::-webkit-scrollbar {
+  background-color: #edf4f2;
+  border-radius: 3.5px;
+}
+.archive-filters .filters-cont::-webkit-scrollbar-thumb {
+  background-color: rgba(94, 157, 154, 0.2);
+  border-radius: 3.5px;
 }
 
 .rooms-grid {
