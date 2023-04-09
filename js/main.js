@@ -348,6 +348,50 @@ $(document).ready(function () {
     }
     $(".faq-head").not(this).siblings().slideUp(500);
   });
+
+  /************************************ About Slider ************************************/
+  var reteSwiper = new Swiper(".our-rate-cont .swiper", {
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".our-rate-cont .swiper-btn-next",
+      prevEl: ".our-rate-cont .swiper-btn-prev",
+    },
+    loop: true,
+    pagination: {
+      el: ".our-rate-cont .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1199: {
+        slidesPerView: 4,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+
+  /************************************ About journy ************************************/
+
+  $(".journy-item").mousemove(function () {
+    $(".journy-item").not(this).removeClass("active");
+    $(this).addClass("active");
+    var imgNum = $(this).data("img");
+    var targetedImg = $(".journy-img img[data-target='" + imgNum + "']");
+    $(".journy-img img").hide();
+    targetedImg.show();
+  });
 });
 
 function startTimer(duration) {
