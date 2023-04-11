@@ -416,6 +416,50 @@ $(document).ready(function () {
     $(".filter-overlay").fadeOut();
     $("body").removeClass("overflow");
   });
+
+  /************************************ testimonials Slider ************************************/
+  var testimonialsSwiper = new Swiper(".testimonials-slider .swiper", {
+    spaceBetween: 15,
+    loop: true,
+    speed: 500,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    pagination: {
+      el: ".testimonials-slider .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".testimonials-slider .swiper-btn-next",
+      prevEl: ".testimonials-slider .swiper-btn-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      1199: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
+  /************************************ facilities ************************************/
+  $(".single-facility-head").click(function () {
+    $(".single-facility-head")
+      .not(this)
+      .parents(".single-facility-item")
+      .removeClass("active");
+    $(this).parents(".single-facility-item").toggleClass("active");
+    if ($(this).siblings().css("display") == "none") {
+      $(this).siblings().slideDown(500);
+    } else {
+      $(this).siblings().slideUp(500);
+    }
+    $(".single-facility-head").not(this).siblings().slideUp(500);
+  });
 });
 
 function startTimer(duration) {
