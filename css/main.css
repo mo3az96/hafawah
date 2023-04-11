@@ -955,8 +955,8 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 }
 @media (max-width: 767px) {
   .advsearch-form {
-    padding: 30px;
-    border-radius: 30px;
+    padding: 20px 15px;
+    border-radius: 20px;
   }
 }
 
@@ -967,8 +967,8 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 }
 @media (max-width: 767px) {
   .advsearch-items {
-    grid-template-columns: 1fr;
-    gap: 30px 15px;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 30px;
   }
 }
@@ -1001,9 +1001,20 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 @media (max-width: 767px) {
   .advsearch-item {
     height: auto;
+    border: 1px solid #dedfeb;
+    border-radius: 15px;
+    justify-content: flex-start;
+    padding: 15px;
+    margin-bottom: 15px;
   }
   .advsearch-item::after {
     display: none;
+  }
+  .advsearch-item.adult-item, .advsearch-item.kids-item {
+    border: none;
+    padding: 0;
+    width: 50%;
+    margin-bottom: 20px;
   }
 }
 
@@ -1048,6 +1059,11 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   bottom: 0;
   opacity: 0;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .advsearch-item-view {
+    width: 100%;
+  }
 }
 
 .qty-cont {
