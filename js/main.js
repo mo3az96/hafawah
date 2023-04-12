@@ -418,7 +418,7 @@ $(document).ready(function () {
   });
 
   /************************************ testimonials Slider ************************************/
-  var testimonialsSwiper = new Swiper(".testimonials-slider .swiper", {
+  var testimonialsSwiper = new Swiper(".single-side-testimonials  .swiper", {
     spaceBetween: 15,
     loop: true,
     speed: 500,
@@ -426,12 +426,39 @@ $(document).ready(function () {
     //   delay: 5000,
     // },
     pagination: {
-      el: ".testimonials-slider .swiper-pagination",
+      el: ".single-side-testimonials  .swiper-pagination",
       clickable: true,
     },
     navigation: {
-      nextEl: ".testimonials-slider .swiper-btn-next",
-      prevEl: ".testimonials-slider .swiper-btn-prev",
+      nextEl: ".single-side-testimonials  .swiper-btn-next",
+      prevEl: ".single-side-testimonials  .swiper-btn-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      1199: {
+        slidesPerView: 1,
+      },
+    },
+  });
+  var gallerySwiper = new Swiper(".gallery-side-testimonials  .swiper", {
+    spaceBetween: 15,
+    loop: true,
+    speed: 500,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    pagination: {
+      el: ".gallery-side-testimonials  .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".gallery-side-testimonials  .swiper-btn-next",
+      prevEl: ".gallery-side-testimonials  .swiper-btn-prev",
     },
     breakpoints: {
       0: {
