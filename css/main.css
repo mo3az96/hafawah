@@ -1970,6 +1970,11 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
 #imgsModal .modal-body {
   padding: 30px;
 }
+@media (max-width: 767px) {
+  #imgsModal .modal-body {
+    padding: 20px 15px;
+  }
+}
 #imgsModal .gallery-modal-title {
   font-size: 20px;
   font-weight: 700;
