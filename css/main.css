@@ -2086,10 +2086,11 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 19px;
-  inset-inline-end: 22px;
+  top: 20px;
+  inset-inline-end: 20px;
   fill: #2a313d;
   z-index: 9;
+  padding: 0;
   transition: all 0.3s ease-in-out;
 }
 .modal-content .modal-close:hover {
@@ -2161,6 +2162,178 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
     gap: 15px;
     grid-template-columns: 1fr;
   }
+}
+
+#rateModal .modal-content {
+  border: none;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1607843137);
+}
+
+.rate-form {
+  padding: 27px 30px 33px;
+}
+@media (max-width: 767px) {
+  .rate-form {
+    padding: 20px 15px;
+  }
+}
+.rate-form .rate-modal-title {
+  font-size: 22px;
+  color: #2a313d;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.rate-form .custom-input {
+  height: 121px;
+  border-color: #c3c4cd;
+}
+.rate-form .custom-input:focus {
+  border-color: #5e9d9a;
+}
+
+.rate-tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.rate-tabs .tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #86959f;
+  fill: #86959f;
+  stroke: #86959f;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 12px;
+  position: relative;
+  padding: 0 11px;
+  transition: all 0.3s ease-in-out;
+}
+.rate-tabs .tab-btn:after {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 1px;
+  width: 100%;
+  background-color: #dedfeb;
+  display: block;
+  content: "";
+  transition: all 0.3s ease-in-out;
+}
+.rate-tabs .tab-btn svg {
+  -webkit-margin-end: 6px;
+          margin-inline-end: 6px;
+}
+.rate-tabs .tab-btn:hover {
+  color: #5e9d9a;
+  fill: #5e9d9a;
+  stroke: #5e9d9a;
+}
+.rate-tabs .tab-btn.active {
+  color: #5e9d9a;
+  fill: #5e9d9a;
+  stroke: #5e9d9a;
+}
+.rate-tabs .tab-btn.active::after {
+  background-color: #5e9d9a;
+}
+
+.rate-items {
+  -webkit-padding-end: 30px;
+          padding-inline-end: 30px;
+}
+@media (max-width: 1199px) {
+  .rate-items {
+    padding: 0;
+  }
+}
+
+.rate-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .rate-item {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.rate-item .item-label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2a313d;
+}
+@media (max-width: 767px) {
+  .rate-item .item-label {
+    margin-bottom: 3px;
+  }
+}
+
+.ratestars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+  .ratestars {
+    -webkit-margin-start: auto;
+            margin-inline-start: auto;
+  }
+}
+.ratestars label {
+  margin: 0;
+  cursor: pointer;
+  margin: 0 4px;
+}
+.ratestars label svg {
+  fill: #fff;
+  stroke: #c3c4cd;
+  transition: all 0.3s ease-in-out;
+}
+.ratestars label:hover svg {
+  stroke: #f7c51e;
+  fill: #f7c51e;
+}
+.ratestars label:hover ~ label svg {
+  stroke: #f7c51e;
+  fill: #f7c51e;
+}
+.ratestars input {
+  display: none;
+}
+.ratestars input:checked ~ label svg {
+  stroke: #f7c51e;
+  fill: #f7c51e;
+}
+
+.rate-submit {
+  width: 115px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 0;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  background-color: #5e9d9a;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.rate-submit:hover {
+  background-color: rgba(94, 157, 154, 0.2);
+  color: #5e9d9a;
 }
 
 .header {
@@ -2867,7 +3040,7 @@ header.fixed .logo {
   border-radius: 5px;
   display: flex;
   align-items: flex-start;
-  padding: 15px 10px;
+  padding: 10px 10px;
   -webkit-padding-end: 5px;
           padding-inline-end: 5px;
   font-size: 13px;
@@ -5907,6 +6080,12 @@ header.fixed .logo {
   margin: 0 0 15px;
 }
 
+.special-req-desc {
+  line-height: 1.71;
+  font-size: 14px;
+  color: #2a313d;
+}
+
 .special-req-label {
   font-size: 14px;
   font-weight: 500;
@@ -5952,6 +6131,7 @@ header.fixed .logo {
 }
 .arrive-feats .item-name span {
   color: #5e9d9a;
+  font-weight: 700;
 }
 
 .log-form {
@@ -6275,6 +6455,90 @@ header.fixed .logo {
 .coupon-item .coupon-btn:hover {
   background-color: #86959f;
   color: #fff;
+}
+
+.order-tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .order-tools {
+    flex-direction: column;
+  }
+}
+.order-tools .order-tool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 127px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 7.5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 991px) {
+  .order-tools .order-tool {
+    margin: 7.5px 0;
+  }
+}
+@media (max-width: 767px) {
+  .order-tools .order-tool {
+    width: 100%;
+  }
+}
+.order-tools .order-tool svg {
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+}
+.order-tools .order-tool.order-cancel {
+  border-color: #f54748;
+  color: #f54748;
+  fill: #f54748;
+  stroke: #f54748;
+  background-color: #fdeded;
+}
+.order-tools .order-tool.order-cancel:hover {
+  background-color: #f54748;
+}
+.order-tools .order-tool.order-invoice {
+  border-color: #5e9d9a;
+  color: #5e9d9a;
+  fill: #5e9d9a;
+  stroke: #5e9d9a;
+  background-color: #ecf3f3;
+}
+.order-tools .order-tool.order-invoice:hover {
+  background-color: #5e9d9a;
+}
+.order-tools .order-tool.order-extend {
+  border-color: #5ebc0d;
+  color: #5ebc0d;
+  fill: #5ebc0d;
+  stroke: #5ebc0d;
+  background-color: #edffde;
+}
+.order-tools .order-tool.order-extend:hover {
+  background-color: #5ebc0d;
+}
+.order-tools .order-tool.order-rate {
+  border-color: #ffc107;
+  color: #ffc107;
+  fill: #ffc107;
+  stroke: #ffc107;
+  background-color: #fff8e7;
+}
+.order-tools .order-tool.order-rate:hover {
+  background-color: #ffc107;
+}
+.order-tools .order-tool:hover {
+  color: #fff;
+  fill: #fff;
+  stroke: #fff;
 }
 
 .orders-sec .view-icos {
