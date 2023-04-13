@@ -397,13 +397,13 @@ $(document).ready(function () {
   $(".view-ico.grid-view").click(function (e) {
     $(".view-ico.grid-view").addClass("active");
     $(".view-ico.list-view").removeClass("active");
-    $(".rooms-grid").removeClass("list");
+    $(".rooms-grid, .orders-grid").removeClass("list");
     $(".imgs-slider").trigger("refresh.owl.carousel");
   });
   $(".view-ico.list-view").click(function (e) {
     $(".view-ico.list-view").addClass("active");
     $(".view-ico.grid-view").removeClass("active");
-    $(".rooms-grid").addClass("list");
+    $(".rooms-grid, .orders-grid").addClass("list");
     $(".imgs-slider").trigger("refresh.owl.carousel");
   });
   $(".filter-btn").click(function (e) {

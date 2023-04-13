@@ -1,0 +1,31 @@
+<svg
+    id="info"
+    xmlns="http://www.w3.org/2000/svg"
+    width="54.161"
+    height="54.161"
+    viewBox="0 0 54.161 54.161"
+>
+    <path
+        id="Path_29790"
+        data-name="Path 29790"
+        d="M29.081,2A27.081,27.081,0,1,0,56.161,29.081,27.081,27.081,0,0,0,29.081,2Zm0,48.745A21.664,21.664,0,1,1,50.745,29.081,21.664,21.664,0,0,1,29.081,50.745Z"
+        transform="translate(-2 -2)"
+        fill="#f54748"
+    />
+    <circle
+        id="Ellipse_7075"
+        data-name="Ellipse 7075"
+        cx="3"
+        cy="3"
+        r="3"
+        transform="translate(24 13.161)"
+        fill="#f54748"
+    />
+    <path
+        id="Path_29791"
+        data-name="Path 29791"
+        d="M13.708,10A2.708,2.708,0,0,0,11,12.708v13.54a2.708,2.708,0,1,0,5.416,0V12.708A2.708,2.708,0,0,0,13.708,10Z"
+        transform="translate(13.373 11.664)"
+        fill="#f54748"
+    />
+</svg>
