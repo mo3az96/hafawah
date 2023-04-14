@@ -7202,6 +7202,7 @@ header.fixed .logo {
   display: flex;
   align-items: center;
   padding: 20px 30px;
+  border-bottom: 1px solid #dedfeb;
 }
 @media (max-width: 767px) {
   .profile-photo {
@@ -7287,7 +7288,7 @@ header.fixed .logo {
 
 .account-form {
   padding: 20px 30px 10px;
-  border-block: 1px solid #dedfeb;
+  border-bottom: 1px solid #dedfeb;
 }
 @media (max-width: 767px) {
   .account-form {
