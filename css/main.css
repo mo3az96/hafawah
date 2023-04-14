@@ -5610,7 +5610,7 @@ header.fixed .logo {
 }
 .tab-qty .item-icon img {
   width: 19px;
-  filter: brightness(0) saturate(100%);
+  filter: brightness(0) saturate(100%) invert(14%) sepia(21%) saturate(763%) hue-rotate(179deg) brightness(96%) contrast(85%);
 }
 .tab-qty .item-value {
   font-size: 14px;
@@ -6066,7 +6066,7 @@ header.fixed .logo {
 }
 .choosed-items .item-icon img {
   width: 19px;
-  filter: brightness(0) saturate(100%);
+  filter: brightness(0) saturate(100%) invert(14%) sepia(21%) saturate(763%) hue-rotate(179deg) brightness(96%) contrast(85%);
 }
 .choosed-items .item-name {
   font-size: 14px;
@@ -6698,6 +6698,277 @@ header.fixed .logo {
   color: #fff;
 }
 
+.invoice-cont {
+  box-shadow: 0px 2px 4px rgba(166, 164, 164, 0.2);
+  border: 1px solid #f0f1f6;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 970px;
+  margin: auto;
+}
+.invoice-cont > div {
+  border-bottom: 1px solid #dedfeb;
+}
+.invoice-cont > div:last-of-type {
+  border: none;
+}
+.invoice-cont h6 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2a313d;
+  margin: 0 0 20px;
+}
+
+.invoice-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px 25px;
+}
+.invoice-logo img {
+  width: 218px;
+}
+@media (max-width: 991px) {
+  .invoice-logo {
+    padding: 20px 15px;
+  }
+  .invoice-logo img {
+    width: 175px;
+  }
+}
+
+.invoice-main-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+}
+@media (max-width: 991px) {
+  .invoice-main-info {
+    padding: 20px 15px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.invoice-main-info p {
+  display: flex;
+  align-items: center;
+  margin: 0 0 18px;
+}
+.invoice-main-info p:first-of-type {
+  padding-top: 10px;
+}
+@media (max-width: 991px) {
+  .invoice-main-info p:first-of-type {
+    padding: 0;
+  }
+}
+.invoice-main-info p:last-of-type {
+  margin: 0;
+}
+.invoice-main-info strong {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2a313d;
+  width: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-margin-end: 11px;
+          margin-inline-end: 11px;
+  line-height: 1.375;
+}
+.invoice-main-info strong:after {
+  content: ":";
+  -webkit-margin-start: 7px;
+          margin-inline-start: 7px;
+}
+.invoice-main-info span {
+  font-size: 15px;
+  color: #2a313d;
+  line-height: 1.4;
+}
+
+.invoice-table {
+  padding: 30px 20px 40px;
+}
+@media (max-width: 991px) {
+  .invoice-table {
+    padding: 20px 15px;
+  }
+}
+
+.table-cont {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #5e9d9a;
+}
+.table-cont table {
+  width: 100%;
+  min-width: 750px;
+  table-layout: fixed;
+  background-color: #f1f9f9;
+  text-align: center;
+  border-collapse: collapse;
+  border-style: hidden;
+}
+.table-cont table th,
+.table-cont table td {
+  border: 1px solid #5e9d9a;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2a313d;
+  padding: 16px 5px;
+}
+.table-cont .table-feats .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #2a313d;
+}
+.table-cont .table-feats .item .item-icon {
+  width: 18px;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+.table-cont .table-feats .item .item-icon img {
+  max-width: 100%;
+  filter: brightness(0) saturate(100%) invert(14%) sepia(21%) saturate(763%) hue-rotate(179deg) brightness(96%) contrast(85%);
+}
+.table-cont .totals h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #5e9d9a;
+  margin: 0;
+}
+.table-cont .totals h5 span {
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-margin-start: 5.5px;
+          margin-inline-start: 5.5px;
+}
+
+.invoice-btn {
+  width: 150px;
+  height: 48px;
+  border-radius: 28px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #5e9d9a;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 0;
+  transition: all 0.3s ease-in-out;
+}
+.invoice-btn:hover {
+  background-color: rgba(94, 157, 154, 0.2);
+  color: #5e9d9a;
+}
+
+.invoice-footer {
+  padding: 30px 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .invoice-footer {
+    padding: 15px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.invoice-footer .invoice-contact {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .invoice-footer .invoice-contact {
+    padding: 5px 0;
+  }
+}
+.invoice-footer .invoice-contact .contact-icon {
+  fill: #5e9d9a;
+  stroke: #5e9d9a;
+}
+@media (max-width: 991px) {
+  .invoice-footer .invoice-contact .contact-icon {
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.invoice-footer .invoice-contact .contact-title {
+  font-size: 14px;
+  color: #86959f;
+  font-weight: 500;
+  margin: 0;
+  -webkit-margin-end: 5px;
+          margin-inline-end: 5px;
+  -webkit-margin-start: 8px;
+          margin-inline-start: 8px;
+}
+.invoice-footer .invoice-contact .contact-value {
+  font-size: 14px;
+  color: #2a313d;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.invoice-footer .invoice-contact .contact-value:hover {
+  color: #5e9d9a;
+}
+
+@media print {
+  header,
+  footer,
+  .breadcrumb-sec,
+  .invoice-btn {
+    display: none;
+  }
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .invoice-logo {
+    padding: 30px 15px 25px;
+  }
+  .invoice-logo img {
+    width: 175px;
+  }
+  .invoice-main-info {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+  }
+  .invoice-table {
+    padding: 30px 20px 40px;
+  }
+  .table-cont table {
+    min-width: auto;
+  }
+  .invoice-cont {
+    max-width: 100%;
+    margin: 0;
+  }
+  .invoice-footer {
+    padding: 15px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .invoice-footer .invoice-contact {
+    padding: 5px 0;
+  }
+}
 footer {
   background-attachment: fixed;
   background-position: center;
