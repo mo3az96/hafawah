@@ -487,6 +487,16 @@ $(document).ready(function () {
     }
     $(".single-facility-head").not(this).siblings().slideUp(500);
   });
+
+  /************************************ Form ************************************/
+  $(document).on("click", ".photo-input .del-btn", function (e) {
+    e.preventDefault();
+    var el = $(this).siblings("input");
+    el.wrap("<form>").closest("form").get(0).reset();
+    el.unwrap();
+    $(".photo-input").removeClass("active");
+    $(".photo-input .value img").remove();
+  });
 });
 
 function startTimer(duration) {
@@ -543,4 +553,12 @@ function passOtpNext() {
   } else {
     $(".otp-inputs .otp-field").addClass("error");
   }
+}
+
+function profileImg(input) {
+  $(".photo-input").addClass("active");
+  $(".photo-input .value").append("<img />");
+  $(".photo-input .value img")[0].src = (
+    window.URL ? URL : webkitURL
+  ).createObjectURL(input.files[0]);
 }
