@@ -882,6 +882,44 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   opacity: 1;
 }
 
+.switch {
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.switch .slider {
+  width: 34px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.3803921569);
+  border-radius: 7px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.switch .hand {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-start: 0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
+}
+.switch input {
+  display: none;
+}
+.switch input:checked ~ .slider {
+  background-color: rgba(94, 157, 154, 0.3803921569);
+}
+.switch input:checked ~ .slider .hand {
+  background-color: #5e9d9a;
+  inset-inline-start: calc(100% - 20px);
+}
+
 .header-list {
   display: flex;
   align-items: center;
@@ -7295,13 +7333,51 @@ header.fixed .logo {
     padding: 20px 15px 0;
   }
 }
-
 .account-form .form-line {
   gap: 15px 30px;
 }
 @media (max-width: 767px) {
   .account-form .form-line {
     gap: 0;
+  }
+}
+
+.contact-data-form {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .contact-data-form {
+    padding: 20px 15px;
+  }
+}
+.contact-data-form .form-submit {
+  width: 123px;
+  margin-top: 5px;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+}
+@media (max-width: 767px) {
+  .contact-data-form .form-submit {
+    width: 100%;
+  }
+}
+.contact-data-form .form-line {
+  gap: 15px 30px;
+}
+@media (max-width: 767px) {
+  .contact-data-form .form-line {
+    gap: 0;
+  }
+}
+.contact-data-form.mail-data-form .form-line {
+  align-items: flex-end;
+}
+.contact-data-form.mail-data-form .form-group {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .contact-data-form.mail-data-form .form-group {
+    margin-bottom: 20px;
   }
 }
 
@@ -7318,6 +7394,39 @@ header.fixed .logo {
   .accout-form-btn .form-submit {
     width: 100%;
   }
+}
+
+.notification-setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dedfeb;
+  padding: 20px 30px;
+}
+.notification-setting-item:last-of-type {
+  border: none;
+}
+@media (max-width: 767px) {
+  .notification-setting-item {
+    padding: 20px 15px;
+  }
+}
+.notification-setting-item .notification-setting-text {
+  -webkit-margin-end: 20px;
+          margin-inline-end: 20px;
+}
+.notification-setting-item .notification-setting-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2a313d;
+  line-height: 1.466;
+  margin: 0 0 10px;
+}
+.notification-setting-item .notification-setting-desc {
+  font-size: 14px;
+  color: #2a313d;
+  margin: 0;
+  line-height: 1.357;
 }
 
 footer {

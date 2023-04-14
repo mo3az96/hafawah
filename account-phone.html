@@ -433,7 +433,54 @@
               </a>
             </div>
           </div>
-          <div class="account-content">account-content</div>
+          <div class="account-content">
+            <form>
+              <div class="contact-data-form phone-data-form">
+                <div class="form-line">
+                  <div class="form-group">
+                    <label class="custom-label"> الدولة </label>
+                    <div class="input-cont">
+                      <select class="custom-input country-select">
+                        <option value="sa">السعودية</option>
+                        <option value="ae">الإمارات</option>
+                        <option value="eg">مصر</option>
+                        <option value="qa">قطر</option>
+                        <option value="kw">الكويت</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="custom-label"> رقم الهاتف </label>
+                    <div class="input-cont">
+                      <div class="input-ico">
+                        <img src="images/form/phone.svg" />
+                      </div>
+                      <div class="country-key">
+                        966+
+                        <img src="images/lang/ar.svg" />
+                      </div>
+                      <div class="validate">
+                        <a
+                          class="otp-modal-btn"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#otpModal"
+                        >
+                          تحقق
+                        </a>
+                      </div>
+                      <input
+                        type="tel"
+                        placeholder="رقم الهاتف"
+                        class="custom-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button class="form-submit">تغيير</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -599,6 +646,117 @@
     </footer>
     <!-- End Footer -->
 
+    <div class="modal fade" id="otpModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="modal-close" data-bs-dismiss="modal">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16.784"
+              height="16.777"
+              viewBox="0 0 16.784 16.777"
+            >
+              <path
+                id="Path_29777"
+                data-name="Path 29777"
+                d="M17.827,16.353l6.617-6.617a1.04,1.04,0,0,0-1.47-1.47l-6.617,6.617L9.74,8.266a1.04,1.04,0,0,0-1.47,1.47l6.617,6.617L8.269,22.97a1.04,1.04,0,1,0,1.47,1.47l6.617-6.617,6.617,6.617a1.036,1.036,0,0,0,.735.3h0a1.04,1.04,0,0,0,.735-1.775Z"
+                transform="translate(-7.965 -7.968)"
+              />
+            </svg>
+          </button>
+          <div class="modal-body">
+            <div class="otp-modal-cont">
+              <div class="otp-img">
+                <img src="images/auth/pass.svg" class="img-fluid" />
+              </div>
+              <h3 class="modal-title">يرجي إدخال رمز التحقق</h3>
+              <div class="otp-modal-block" data-duration="30">
+                <h5 class="otp-title">رمز التحقق</h5>
+                <form>
+                  <div class="otp-inputs">
+                    <input
+                      class="otp-field"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                    />
+                    <input
+                      class="otp-field"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                      disabled
+                    />
+                    <input
+                      class="otp-field"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                      disabled
+                    />
+                    <input
+                      class="otp-field"
+                      type="number"
+                      maxlength="1"
+                      placeholder="_"
+                      disabled
+                    />
+                  </div>
+                  <div class="resend-cont">
+                    <div class="prgress">
+                      <svg
+                        width="32px"
+                        height="32px"
+                        viewBox="0 0 42 42"
+                        class="donut"
+                      >
+                        <circle
+                          id="c1"
+                          cx="21"
+                          cy="21"
+                          r="15.91549430918954"
+                          stroke-dasharray="100 0"
+                          stroke-dashoffset="100"
+                        ></circle>
+                        <circle
+                          id="c2"
+                          cx="21"
+                          cy="21"
+                          r="15.91549430918954"
+                          stroke-dasharray="0 100"
+                          stroke-dashoffset="0"
+                        ></circle>
+                        <g class="chart-text">
+                          <text
+                            x="50%"
+                            y="50%"
+                            dominant-baseline="middle"
+                            text-anchor="middle"
+                            id="counterText"
+                          >
+                            5
+                          </text>
+                        </g>
+                      </svg>
+                    </div>
+                    <button class="resend-btn" disabled>
+                      إعادة إرسال الرمز
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    class="otp-submit"
+                    data-bs-dismiss="modal"
+                  >
+                    تأكيد الرمز
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
