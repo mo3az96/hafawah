@@ -3396,6 +3396,7 @@ header.fixed .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  direction: ltr;
 }
 
 .otp-field {
@@ -3439,6 +3440,7 @@ header.fixed .logo {
 .resend-cont .prgress {
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
+  position: relative;
 }
 .resend-cont circle {
   transition: all 1s linear;
@@ -3458,8 +3460,12 @@ header.fixed .logo {
   fill: transparent;
 }
 .resend-cont #counterText {
-  fill: #5e9d9a;
-  font-size: 10px;
+  color: #5e9d9a;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .resend-cont .resend-btn {
   font-size: 11px;
