@@ -1055,7 +1055,7 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 }
 .main-slide .slide-link {
   width: 138px;
-  padding: 9px 0 8px;
+  height: 48px;
   border-radius: 24px;
   border: 2px solid #ffffff;
   display: flex;
@@ -1073,7 +1073,8 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 }
 @media (max-width: 767px) {
   .main-slide .slide-link {
-    background-color: red;
+    background-color: blue;
+    line-height: 48px;
   }
 }
 .main-slide .animated-text {
