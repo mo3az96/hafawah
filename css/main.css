@@ -7580,7 +7580,6 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
 }
 
 footer {
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
