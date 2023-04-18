@@ -60,6 +60,7 @@ $(document).ready(function () {
         to: $(".dateIn").data("to"),
       },
     ],
+    mode: "range",
   });
   $(".dateOut").flatpickr({
     enable: [
@@ -68,6 +69,7 @@ $(document).ready(function () {
         to: $(".dateOut").data("to"),
       },
     ],
+    mode: "range",
   });
 
   $(".advsearch-date").change(function (e) {

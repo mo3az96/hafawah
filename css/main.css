@@ -1229,6 +1229,10 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   color: #86959f;
   line-height: 1.36;
   display: flex;
+  direction: ltr;
+}
+html[dir=rtl] .advsearch-item-view span {
+  justify-content: flex-end;
 }
 .advsearch-item-view .advsearch-date {
   position: absolute;
@@ -1366,11 +1370,20 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   color: #2a313d;
   border-radius: 0;
   border: none;
-  border-radius: 50%;
+  margin: 0;
+  width: 44px;
+  height: 44px;
+  box-shadow: none !important;
+  max-width: none;
   transition: all 0.3s ease-in-out;
 }
 .flatpickr-day:hover {
   background-color: rgba(94, 157, 154, 0.2);
+  color: #5e9d9a;
+}
+.flatpickr-day.today {
+  border: 1px solid #5e9d9a;
+  border-radius: 50%;
   color: #5e9d9a;
 }
 .flatpickr-day.flatpickr-disabled {
@@ -1387,12 +1400,20 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 .flatpickr-day.nextMonthDay:hover, .flatpickr-day.prevMonthDay:hover {
   color: #8f9bb3;
 }
-.flatpickr-day.selected {
+.flatpickr-day.selected.startRange, .flatpickr-day.selected.endRange {
   background-color: #5e9d9a;
   color: #fff;
 }
-.flatpickr-day.selected:hover {
+.flatpickr-day.endRange.endRange {
+  background-color: #5e9d9a;
   color: #fff;
+}
+.flatpickr-day.startRange.startRange {
+  background-color: #5e9d9a;
+  color: #fff;
+}
+.flatpickr-day.inRange {
+  background-color: #e6f5f4;
 }
 
 .about-sec-cont {
