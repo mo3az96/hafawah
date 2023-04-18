@@ -6954,13 +6954,14 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
 }
 
 .invoice-main-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   padding: 30px;
 }
 @media (max-width: 991px) {
   .invoice-main-info {
     padding: 20px 15px;
+    display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
   }
