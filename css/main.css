@@ -987,6 +987,13 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding-top: 32.5768667643%;
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .main-slide {
+    padding: 0;
+  }
 }
 .main-slide .slide-img {
   position: absolute;
@@ -1004,7 +1011,9 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
      object-position: center;
 }
 .main-slide .slide-text {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
   width: 100%;
   height: 100%;
@@ -1013,6 +1022,13 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   align-items: center;
   justify-content: center;
   padding: 0 15px;
+}
+@media (max-width: 1199px) {
+  .main-slide .slide-text {
+    position: relative;
+    top: unset;
+    left: auto;
+  }
 }
 .main-slide .text-cont {
   width: 100%;
@@ -1073,7 +1089,6 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 }
 @media (max-width: 767px) {
   .main-slide .slide-link {
-    background-color: blue;
     padding-top: 5px;
   }
 }
