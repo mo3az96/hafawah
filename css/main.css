@@ -1090,11 +1090,6 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   background-color: #fff;
   color: #5e9d9a;
 }
-@media (max-width: 767px) {
-  .main-slide .slide-link {
-    padding-top: 5px;
-  }
-}
 .main-slide .animated-text {
   transition-property: all;
   transition-duration: 0.3s;
