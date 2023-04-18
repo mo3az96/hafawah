@@ -1074,7 +1074,6 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 @media (max-width: 767px) {
   .main-slide .slide-link {
     background-color: red;
-    line-height: 48px;
   }
 }
 .main-slide .animated-text {
