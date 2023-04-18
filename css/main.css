@@ -4012,8 +4012,8 @@ header.fixed .logo {
 
 .contact-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 68px;
+  grid-template-columns: 1fr 1.2127fr;
+  gap: 28px;
 }
 @media (max-width: 1199px) {
   .contact-form {
@@ -4053,7 +4053,7 @@ header.fixed .logo {
 .contact-image {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 @media (max-width: 991px) {
   .contact-image {
