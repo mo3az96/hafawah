@@ -708,6 +708,9 @@ html[dir=ltr] .input-unit ~ .custom-input {
   font-size: 14px;
   color: #2a313d;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 html[dir=rtl] .select2-container .select2-selection .select2-selection__rendered {
   padding: 0;
@@ -4839,6 +4842,7 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
 }
 .list-order .select2-container .select2-selection {
   height: 40px;
+  border-radius: 5px;
 }
 
 .view-icos {
