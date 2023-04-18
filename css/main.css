@@ -6978,6 +6978,13 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   display: flex;
   justify-content: space-between;
   padding: 30px;
+  -webkit-padding-end: 139px;
+          padding-inline-end: 139px;
+}
+@media (max-width: 1199px) {
+  .invoice-main-info {
+    padding: 30px;
+  }
 }
 @media (max-width: 991px) {
   .invoice-main-info {
