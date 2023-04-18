@@ -3131,21 +3131,35 @@ header.fixed .logo {
 
 /* feats*/
 .page-feats-grid {
-  margin-top: 80px;
+  margin-top: 70px;
+  padding-top: 50px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 15px;
+  position: relative;
+}
+.page-feats-grid:after {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 75%;
+  height: 1px;
+  background-color: #dedfeb;
+  position: absolute;
 }
 @media (max-width: 991px) {
   .page-feats-grid {
     flex-direction: column;
     gap: unset;
+    padding-top: 40px;
     margin-top: 50px;
   }
 }
 @media (max-width: 767px) {
   .page-feats-grid {
+    padding-top: 30px;
     margin-top: 40px;
   }
 }
