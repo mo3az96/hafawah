@@ -1359,58 +1359,22 @@ html[dir=rtl] .advsearch-item-view span {
   stroke: #5e9d9a;
 }
 
-.flatpickr-day {
-  font-size: 15px;
+.daterangepicker {
+  font-family: inherit;
+}
+.daterangepicker .days-count {
+  text-align: center;
+  font-size: 16px;
   font-weight: 500;
-  color: #2a313d;
-  border-radius: 0;
-  border: none;
-  margin: 0;
-  width: 44px;
-  height: 44px;
-  box-shadow: none !important;
-  max-width: none;
-  transition: all 0.3s ease-in-out;
-}
-.flatpickr-day:hover {
-  background-color: rgba(94, 157, 154, 0.2);
   color: #5e9d9a;
+  line-height: 1.6875;
+  padding: 15px 0 19px;
+  clear: both;
+  border-top: 1px solid #dedfeb;
 }
-.flatpickr-day.today {
-  border: 1px solid #5e9d9a;
-  border-radius: 50%;
-  color: #5e9d9a;
+.daterangepicker .days-range {
+  direction: ltr;
 }
-.flatpickr-day.flatpickr-disabled {
-  color: #2a313d;
-  text-decoration: line-through;
-}
-.flatpickr-day.flatpickr-disabled:hover {
-  color: #2a313d;
-}
-.flatpickr-day.nextMonthDay, .flatpickr-day.prevMonthDay {
-  color: #8f9bb3;
-  text-decoration: line-through;
-}
-.flatpickr-day.nextMonthDay:hover, .flatpickr-day.prevMonthDay:hover {
-  color: #8f9bb3;
-}
-.flatpickr-day.selected.startRange, .flatpickr-day.selected.endRange {
-  background-color: #5e9d9a;
-  color: #fff;
-}
-.flatpickr-day.endRange.endRange {
-  background-color: #5e9d9a;
-  color: #fff;
-}
-.flatpickr-day.startRange.startRange {
-  background-color: #5e9d9a;
-  color: #fff;
-}
-.flatpickr-day.inRange {
-  background-color: #e6f5f4;
-}
-
 .about-sec-cont {
   display: grid;
   grid-template-columns: 1fr 1fr;
