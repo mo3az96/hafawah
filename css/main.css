@@ -3080,6 +3080,11 @@ header.fixed .logo {
   margin-top: 10px;
 }
 @media (max-width: 991px) {
+  .rooms-sec .sec-more, .specials-sec .sec-more {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 991px) {
   .sec-more {
     margin-top: 25px;
   }
