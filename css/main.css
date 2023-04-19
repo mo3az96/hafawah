@@ -1737,7 +1737,7 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
   }
-  .gallery-mixItUp-btns ::-webkit-scrollbar {
+  .gallery-mixItUp-btns::-webkit-scrollbar {
     display: none;
     height: 0;
   }
@@ -5068,8 +5068,8 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
 }
 @media (max-width: 767px) {
   .single-imgs-gird {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 .single-imgs-gird .grid-item {
@@ -5108,6 +5108,11 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   transform: scale(0);
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 767px) {
+  .single-imgs-gird .grid-item .single-img::after {
+    inset: 10px;
+  }
+}
 .single-imgs-gird .grid-item .single-img:hover img {
   transform: scale(1.05);
 }
@@ -5126,10 +5131,6 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   height: 100%;
 }
 @media (max-width: 767px) {
-  .single-imgs-gird .grid-item:first-of-type {
-    grid-row: unset;
-    grid-column: unset;
-  }
   .single-imgs-gird .grid-item:first-of-type .single-img {
     height: auto;
     padding-bottom: 77.8947368421%;
@@ -5293,6 +5294,7 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   }
 }
 .single-tools button {
+  padding: 0;
   border: none;
   background-color: #fff;
   border: 1px solid #e8eaf7;
@@ -5658,7 +5660,7 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
     max-width: 100%;
     white-space: nowrap;
   }
-  .tabs-btns ::-webkit-scrollbar {
+  .tabs-btns::-webkit-scrollbar {
     display: none;
     height: 0;
   }
@@ -6163,8 +6165,8 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
 }
 @media (max-width: 767px) {
   .book-imgs-cont .book-imgs-gird {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
 .book-imgs-cont .book-imgs-gird .grid-item {
@@ -6203,6 +6205,11 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   transform: scale(0);
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 767px) {
+  .book-imgs-cont .book-imgs-gird .grid-item .book-img::after {
+    inset: 10px;
+  }
+}
 .book-imgs-cont .book-imgs-gird .grid-item .book-img:hover img {
   transform: scale(1.05);
 }
@@ -6221,10 +6228,6 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   height: 100%;
 }
 @media (max-width: 767px) {
-  .book-imgs-cont .book-imgs-gird .grid-item:first-of-type {
-    grid-row: unset;
-    grid-column: unset;
-  }
   .book-imgs-cont .book-imgs-gird .grid-item:first-of-type .book-img {
     height: auto;
     padding-bottom: 71.0204081633%;
