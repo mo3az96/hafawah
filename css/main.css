@@ -1735,6 +1735,7 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
     margin-bottom: 15px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
   }
   .gallery-mixItUp-btns ::-webkit-scrollbar {
     display: none;
@@ -5653,6 +5654,7 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
     padding: 7px 10px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
     max-width: 100%;
     white-space: nowrap;
   }
