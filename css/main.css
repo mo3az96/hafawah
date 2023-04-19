@@ -2895,8 +2895,8 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   border: none;
   background-color: transparent;
   padding: 0;
-  -webkit-margin-end: 25px;
-          margin-inline-end: 25px;
+  -webkit-margin-end: 20px;
+          margin-inline-end: 20px;
 }
 .menu-btn .hamburger-lines {
   height: 14px;
@@ -7989,4 +7989,46 @@ html[dir=ltr] .footer-list a:hover {
   .header-list .lang:hover span {
     color: #2a313d;
   }
+}
+.header-list li.header-socials {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .header-list li.header-socials {
+    display: flex;
+  }
+}
+.header-list li.header-socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(94, 157, 154, 0.2);
+  text-decoration: none;
+  fill: #5e9d9a;
+  transition: all 0.3s ease-in-out;
+}
+.header-list li.header-socials a:hover {
+  background-color: #edf4f2;
+}
+.header-list li.header-socials a:hover.linkedin {
+  fill: #0a66c2;
+}
+.header-list li.header-socials a:hover.twitter {
+  fill: #03a9f4;
+}
+.header-list li.header-socials a:hover.whatsapp {
+  fill: #075e54;
+}
+.header-list li.header-socials a:hover.facebook {
+  fill: #1877f2;
+}
+.header-list li.header-socials a ~ a {
+  -webkit-margin-start: 20px;
+          margin-inline-start: 20px;
 }/*# sourceMappingURL=main.css.map */
