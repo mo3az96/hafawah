@@ -4997,7 +4997,7 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
 }
 .rooms-grid .room-item {
   transition: none;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .filter-title {
