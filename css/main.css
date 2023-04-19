@@ -2955,7 +2955,7 @@ header.fixed .header {
 }
 @media (max-width: 767px) {
   header.fixed .header {
-    padding: 5px 0;
+    padding: 7px 0;
   }
 }
 header.fixed .logo {
@@ -2963,7 +2963,7 @@ header.fixed .logo {
 }
 @media (max-width: 767px) {
   header.fixed .logo {
-    width: 90px;
+    width: 120px;
   }
 }
 
