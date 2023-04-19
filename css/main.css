@@ -1533,7 +1533,7 @@ html[dir=rtl] .advsearch-item-view span {
   .map-branch {
     flex-direction: column;
     padding: 5px;
-    width: 150px;
+    width: 180px;
   }
 }
 .map-branch .branch-img {
