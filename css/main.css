@@ -1735,6 +1735,10 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
     margin-bottom: 15px;
     overflow-x: auto;
   }
+  .gallery-mixItUp-btns ::-webkit-scrollbar {
+    display: none;
+    height: 0;
+  }
 }
 
 .gallery-mixItUp-items {
@@ -5649,6 +5653,10 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
     overflow-y: auto;
     max-width: 100%;
     white-space: nowrap;
+  }
+  .tabs-btns ::-webkit-scrollbar {
+    display: none;
+    height: 0;
   }
 }
 .tabs-btns .tab-btn {
