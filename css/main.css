@@ -1285,11 +1285,21 @@ html[dir=rtl] .advsearch-item-view span {
   left: 50%;
   padding: 15px 15px 10px;
   width: 228px;
+  max-height: 322px;
+  overflow-y: auto;
   transform: translateX(-50%);
   visibility: hidden;
   opacity: 0;
   display: none;
   transition: all 0.3s ease-in-out;
+}
+.people-list::-webkit-scrollbar {
+  background-color: #edf4f2;
+  border-radius: 3.5px;
+}
+.people-list::-webkit-scrollbar-thumb {
+  background-color: rgba(94, 157, 154, 0.2);
+  border-radius: 3.5px;
 }
 .people-list .list-title {
   font-size: 14px;
