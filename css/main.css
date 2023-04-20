@@ -2012,13 +2012,20 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   align-items: center;
   justify-content: center;
   padding: 0 13px;
+  min-width: 46px;
   background-color: rgba(94, 157, 154, 0.051);
-  border: 1px solid #5e9d9a;
+  border: 1px solid red;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+  position: relative;
+}
+.room-item .rating-value small {
   font-size: 14px;
   font-weight: 500;
   color: #5e9d9a;
-  -webkit-margin-end: 8px;
-          margin-inline-end: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 14px;
 }
 .room-item .rating-name {
   font-size: 14px;
@@ -2193,6 +2200,12 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   border-radius: 16px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.room-item .room-opts .room-opts-btn span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 14px;
 }
 .room-item .room-opts .room-opts-btn svg {
   -webkit-margin-start: 6px;
@@ -4658,11 +4671,16 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   padding: 0 13px;
   background-color: rgba(94, 157, 154, 0.051);
   border: 1px solid #5e9d9a;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+.website-item .rating-value small {
   font-size: 14px;
   font-weight: 500;
   color: #5e9d9a;
-  -webkit-margin-end: 8px;
-          margin-inline-end: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 14px;
 }
 .website-item .rating-name {
   font-size: 14px;
@@ -5367,11 +5385,16 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   padding: 0 13px;
   background-color: rgba(94, 157, 154, 0.051);
   border: 1px solid #5e9d9a;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+.rating-value small {
   font-size: 14px;
   font-weight: 500;
   color: #5e9d9a;
-  -webkit-margin-end: 8px;
-          margin-inline-end: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 14px;
 }
 
 .rating-name {
@@ -6137,11 +6160,16 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   padding: 0 13px;
   background-color: rgba(94, 157, 154, 0.051);
   border: 1px solid #5e9d9a;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+.general-rate .rating-value small {
   font-size: 14px;
   font-weight: 500;
   color: #5e9d9a;
-  -webkit-margin-end: 8px;
-          margin-inline-end: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 14px;
 }
 .general-rate .rating-name {
   font-size: 14px;
@@ -6171,7 +6199,7 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   margin: 0;
   line-height: 1.416;
 }
-.progress-item .progress-val {
+.progress-item .progress-val small {
   font-size: 12px;
   color: #2a313d;
 }
