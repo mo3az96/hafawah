@@ -1138,6 +1138,7 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
 }
 @media (max-width: 767px) {
   .advsearch-items {
@@ -1165,7 +1166,7 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   transform: translateY(-50%);
   inset-inline-end: 0;
 }
-.advsearch-item:last-of-type::after {
+.advsearch-item.kids-item::after {
   display: none;
 }
 .advsearch-item:hover .people-list {
@@ -1361,34 +1362,100 @@ html[dir=rtl] .advsearch-item-view span {
 
 .daterangepicker {
   font-family: inherit;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 15px;
+  border: none;
+  padding: 7.5px;
 }
-.daterangepicker .calendar-table td,
-.daterangepicker .calendar-table th {
+.advsearch-items .daterangepicker {
+  width: 497px;
+  top: 100% !important;
+  margin-top: 0;
+}
+html[dir=rtl] .advsearch-items .daterangepicker {
+  left: unset !important;
+  right: -30px !important;
+}
+html[dir=ltr] .advsearch-items .daterangepicker {
+  left: -30px !important;
+  right: unset !important;
+}
+@media (max-width: 767px) {
+  .advsearch-items .daterangepicker {
+    width: 275px;
+    top: 90% !important;
+    max-width: 100%;
+  }
+  html[dir=rtl] .advsearch-items .daterangepicker {
+    right: 0 !important;
+  }
+  html[dir=ltr] .advsearch-items .daterangepicker {
+    left: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .daterangepicker {
+    width: 275px;
+    max-width: 100%;
+  }
+}
+.daterangepicker::before, .daterangepicker:after {
+  display: none;
+}
+.daterangepicker .ranges {
+  display: none;
+}
+.daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
+  padding: 7.5px;
+}
+.daterangepicker .drp-calendar.left .calendar-table, .daterangepicker .drp-calendar.right .calendar-table {
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
+    float: unset;
+    margin: auto;
+  }
+}
+.daterangepicker .calendar-table td {
   font-size: 15px;
   font-weight: 500;
   color: #2a313d;
+  height: 30px;
+  line-height: 30px;
+  border: none;
 }
-.daterangepicker .calendar-table td.in-range,
-.daterangepicker .calendar-table th.in-range {
+.daterangepicker .calendar-table td.in-range {
   background-color: #e6f5f4;
 }
-.daterangepicker .calendar-table td.active, .daterangepicker .calendar-table td:hover,
-.daterangepicker .calendar-table th.active,
-.daterangepicker .calendar-table th:hover {
+.daterangepicker .calendar-table td.active, .daterangepicker .calendar-table td:hover {
   background-color: #5e9d9a;
   color: #fff;
 }
-.daterangepicker .calendar-table td.disabled,
-.daterangepicker .calendar-table th.disabled {
+.daterangepicker .calendar-table td.disabled {
   color: #8f9bb3;
 }
-.daterangepicker .calendar-table td.start-date,
-.daterangepicker .calendar-table th.start-date {
+.daterangepicker .calendar-table td.start-date {
   border-radius: 16px 0 0 16px;
 }
-.daterangepicker .calendar-table td.end-date,
-.daterangepicker .calendar-table th.end-date {
+.daterangepicker .calendar-table td.end-date {
   border-radius: 0 16px 16px 0;
+}
+.daterangepicker .calendar-table td.start-date.end-date {
+  border-radius: 16px;
+}
+.daterangepicker .calendar-table tr:first-of-type th {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2a313d;
+  padding-bottom: 20px;
+}
+.daterangepicker .calendar-table tr:last-of-type th {
+  background-color: #f2f3fc;
+  font-size: 13px;
+  font-weight: 500;
+  color: #767676;
+  border-radius: 0;
 }
 .daterangepicker .days-count {
   text-align: center;
@@ -1402,6 +1469,30 @@ html[dir=rtl] .advsearch-item-view span {
 }
 .daterangepicker .days-range {
   direction: ltr;
+}
+.daterangepicker .available.next {
+  background-color: transparent;
+}
+.daterangepicker .available.next:hover {
+  background-color: transparent;
+}
+.daterangepicker .available.prev {
+  background-color: transparent;
+}
+.daterangepicker .available.prev:hover {
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .daterangepicker .available.next {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .daterangepicker .available.prev {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
 }
 
 .about-sec-cont {

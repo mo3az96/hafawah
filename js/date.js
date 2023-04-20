@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var currentDate = moment().format("DD/MM/YYYY");
-  $("#from, #to").daterangepicker(
+  $(".advsearch-sec #from, .advsearch-sec #to").daterangepicker(
     {
       locale: {
         format: "DD/MM/YYYY",
@@ -10,7 +10,39 @@ $(document).ready(function () {
       minDate: currentDate,
       autoApply: true,
       autoUpdateInput: false,
-      opens: document.dir == "rtl" ? "left" : "right",
+      opens: "center",
+      parentEl: $(window).width() <= 767 ? ".dateOut-item" : ".advsearch-items",
+    },
+    function (start, end) {
+      var selectedStartDate = start.format("DD/MM/YYYY");
+      var selectedEndDate = end.format("DD/MM/YYYY");
+
+      $checkinInput = $("#from");
+      $checkoutInput = $("#to");
+
+      $checkinInput.val(selectedStartDate).trigger("change");
+      $checkoutInput.val(selectedEndDate).trigger("change");
+
+      var checkOutPicker = $checkoutInput.data("daterangepicker");
+      checkOutPicker.setStartDate(selectedStartDate);
+      checkOutPicker.setEndDate(selectedEndDate);
+
+      var checkInPicker = $checkinInput.data("daterangepicker");
+      checkInPicker.setStartDate(selectedStartDate);
+      checkInPicker.setEndDate(selectedEndDate);
+    }
+  );
+  $(".single-side-book #from, .single-side-book #to").daterangepicker(
+    {
+      locale: {
+        format: "DD/MM/YYYY",
+      },
+
+      alwaysShowCalendars: true,
+      minDate: currentDate,
+      autoApply: true,
+      autoUpdateInput: false,
+      opens: "right",
     },
     function (start, end) {
       var selectedStartDate = start.format("DD/MM/YYYY");
