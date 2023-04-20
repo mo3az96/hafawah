@@ -2014,7 +2014,7 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   padding: 0 13px;
   min-width: 46px;
   background-color: rgba(94, 157, 154, 0.051);
-  border: 1px solid red;
+  border: 1px solid #5e9d9a;
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
   position: relative;
