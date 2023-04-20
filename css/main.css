@@ -1362,6 +1362,34 @@ html[dir=rtl] .advsearch-item-view span {
 .daterangepicker {
   font-family: inherit;
 }
+.daterangepicker .calendar-table td,
+.daterangepicker .calendar-table th {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2a313d;
+}
+.daterangepicker .calendar-table td.in-range,
+.daterangepicker .calendar-table th.in-range {
+  background-color: #e6f5f4;
+}
+.daterangepicker .calendar-table td.active, .daterangepicker .calendar-table td:hover,
+.daterangepicker .calendar-table th.active,
+.daterangepicker .calendar-table th:hover {
+  background-color: #5e9d9a;
+  color: #fff;
+}
+.daterangepicker .calendar-table td.disabled,
+.daterangepicker .calendar-table th.disabled {
+  color: #8f9bb3;
+}
+.daterangepicker .calendar-table td.start-date,
+.daterangepicker .calendar-table th.start-date {
+  border-radius: 16px 0 0 16px;
+}
+.daterangepicker .calendar-table td.end-date,
+.daterangepicker .calendar-table th.end-date {
+  border-radius: 0 16px 16px 0;
+}
 .daterangepicker .days-count {
   text-align: center;
   font-size: 16px;
@@ -1375,6 +1403,7 @@ html[dir=rtl] .advsearch-item-view span {
 .daterangepicker .days-range {
   direction: ltr;
 }
+
 .about-sec-cont {
   display: grid;
   grid-template-columns: 1fr 1fr;

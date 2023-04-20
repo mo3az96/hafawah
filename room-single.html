@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/fancybox.css" />
-    <link rel="stylesheet" href="css/flatpickr.min.css" />
+    <link rel="stylesheet" href="css/daterangepicker.css" />
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -1125,26 +1125,24 @@
                       class="advsearch-date dateIn"
                       type="text"
                       placeholder="ادخل التاريخ"
-                      data-from="2023-04-2"
-                      data-to="2023-05-25"
+                      id="from"
                     />
                   </div>
                 </div>
-                <div class="advsearch-item dateIn-item">
+                <div class="advsearch-item dateOut-item">
                   <div class="advsearch-item-view">
                     <div class="advsearch-item-icon">
-                      <img src="images/icons/dateIn.svg" />
+                      <img src="images/icons/dateOut.svg" />
                     </div>
                     <div class="advsearch-item-text">
-                      <strong>تاريخ الوصول</strong>
+                      <strong>تاريخ المغادرة</strong>
                       <span>ادخل التاريخ</span>
                     </div>
                     <input
-                      class="advsearch-date dateIn"
+                      class="advsearch-date dateOut"
                       type="text"
                       placeholder="ادخل التاريخ"
-                      data-from="2023-04-2"
-                      data-to="2023-05-25"
+                      id="to"
                     />
                   </div>
                 </div>
@@ -1731,7 +1729,9 @@
     <script src="js/fancybox.umd.js"></script>
     <script src="js/lazyload.js"></script>
     <script src="js/mixitup.min.js"></script>
-    <script src="js/flatpickr.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/daterangepicker.min.js"></script>
+    <script src="js/date.js"></script>
     <script src="js/select2.full.min.js"></script>
     <script src="js/main.js"></script>
 

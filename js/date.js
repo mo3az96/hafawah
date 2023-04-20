@@ -10,6 +10,7 @@ $(document).ready(function () {
       minDate: currentDate,
       autoApply: true,
       autoUpdateInput: false,
+      opens: document.dir == "rtl" ? "left" : "right",
     },
     function (start, end) {
       var selectedStartDate = start.format("DD/MM/YYYY");
@@ -45,6 +46,11 @@ $(document).ready(function () {
     )} - ${picker.endDate.format("YYYY MM DD")}</div>
     <div class="days-range-count">${text}</div>
     </div>`);
+  });
+
+  $(".dateExtend").daterangepicker({
+    autoApply: true,
+    singleDatePicker: true,
   });
 
   $(".advsearch-date").change(function (e) {
