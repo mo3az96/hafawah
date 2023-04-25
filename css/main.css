@@ -2921,7 +2921,6 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
 @media (max-width: 991px) {
   .header-btn .text {
     display: block;
-    margin-top: 2px;
   }
 }
 .header-log-cont .header-btn {
