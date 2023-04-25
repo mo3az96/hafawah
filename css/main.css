@@ -1404,7 +1404,7 @@ html[dir=ltr] .advsearch-items .daterangepicker {
 }
 @media (max-width: 767px) {
   .advsearch-items .daterangepicker {
-    width: 275px;
+    width: 310px;
     top: 90% !important;
     max-width: 100%;
   }
@@ -1417,7 +1417,7 @@ html[dir=ltr] .advsearch-items .daterangepicker {
 }
 @media (max-width: 767px) {
   .daterangepicker {
-    width: 275px;
+    width: 310px;
     max-width: 100%;
   }
 }
@@ -1504,6 +1504,12 @@ html[dir=ltr] .advsearch-items .daterangepicker {
 }
 html[dir=rtl] .daterangepicker .days-count {
   direction: rtl;
+}
+@media (max-width: 767px) {
+  .daterangepicker .days-count {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .daterangepicker .days-count div {
   margin: 0 2px;
