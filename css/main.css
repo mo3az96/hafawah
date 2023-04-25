@@ -19,7 +19,7 @@
 
 body {
   position: relative;
-  font-family: tajawal;
+  font-family: ping;
   font-weight: normal;
   background-color: #edf4f2;
 }
@@ -63,46 +63,53 @@ img {
 }
 
 @font-face {
-  font-family: "tajawal";
-  src: url("../fonts/tajawal/Tajawal-ExtraLight.woff2") format("woff2"), url("../fonts/tajawal/Tajawal-ExtraLight.woff") format("woff"), url("../fonts/tajawal/Tajawal-ExtraLight.ttf") format("truetype");
+  font-family: "ping";
+  src: url("../fonts/ping/PingARLT-Thin.woff2") format("woff2"), url("../fonts/ping/PingARLT-Thin.woff") format("woff"), url("../fonts/ping/PingARLT-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ping";
+  src: url("../fonts/ping/PingARLT-ExtraLight.woff2") format("woff2"), url("../fonts/ping/PingARLT-ExtraLight.woff") format("woff"), url("../fonts/ping/PingARLT-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "tajawal";
-  src: url("../fonts/tajawal/Tajawal-Light.woff2") format("woff2"), url("../fonts/tajawal/Tajawal-Light.woff") format("woff"), url("../fonts/tajawal/Tajawal-Light.ttf") format("truetype");
+  font-family: "ping";
+  src: url("../fonts/ping/PingARLT-Light.woff2") format("woff2"), url("../fonts/ping/PingARLT-Light.woff") format("woff"), url("../fonts/ping/PingARLT-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "tajawal";
-  src: url("../fonts/tajawal/Tajawal-Regular.woff2") format("woff2"), url("../fonts/tajawal/Tajawal-Regular.woff") format("woff"), url("../fonts/tajawal/Tajawal-Regular.ttf") format("truetype");
+  font-family: "ping";
+  src: url("../fonts/ping/PingARLT-Regular.woff2") format("woff2"), url("../fonts/ping/PingARLT-Regular.woff") format("woff"), url("../fonts/ping/PingARLT-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "tajawal";
-  src: url("../fonts/tajawal/Tajawal-Medium.woff2") format("woff2"), url("../fonts/tajawal/Tajawal-Medium.woff") format("woff"), url("../fonts/tajawal/Tajawal-Medium.ttf") format("truetype");
+  font-family: "ping";
+  src: url("../fonts/ping/PingARLT-Medium.woff2") format("woff2"), url("../fonts/ping/PingARLT-Medium.woff") format("woff"), url("../fonts/ping/PingARLT-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "tajawal";
-  src: url("../fonts/tajawal/Tajawal-Bold.woff2") format("woff2"), url("../fonts/tajawal/Tajawal-Bold.woff") format("woff"), url("../fonts/tajawal/Tajawal-Bold.ttf") format("truetype");
+  font-family: "ping";
+  src: url("../fonts/ping/PingARLT-Bold.woff2") format("woff2"), url("../fonts/ping/PingARLT-Bold.woff") format("woff"), url("../fonts/ping/PingARLT-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "tajawal";
-  src: url("../fonts/tajawal/Tajawal-ExtraBold.woff2") format("woff2"), url("../fonts/tajawal/Tajawal-ExtraBold.woff") format("woff"), url("../fonts/tajawal/Tajawal-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "tajawal";
-  src: url("../fonts/tajawal/Tajawal-Black.woff2") format("woff2"), url("../fonts/tajawal/Tajawal-Black.woff") format("woff"), url("../fonts/tajawal/Tajawal-Black.ttf") format("truetype");
+  font-family: "ping";
+  src: url("../fonts/ping/PingARLT-Black.woff2") format("woff2"), url("../fonts/ping/PingARLT-Black.woff") format("woff"), url("../fonts/ping/PingARLT-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 .slider-navs {
   display: flex;
@@ -474,6 +481,8 @@ html[dir=ltr] select.custom-input {
   align-items: center;
   color: #4caf50;
   margin: 0;
+  font-size: 14px;
+  font-weight: 400;
 }
 .validate p span {
   -webkit-margin-start: 8px;
@@ -687,6 +696,9 @@ html[dir=ltr] .input-unit ~ .custom-input {
 .form-submit:hover {
   color: #5e9d9a;
   background-color: rgba(94, 157, 154, 0.2);
+}
+.account-content .form-submit {
+  font-weight: 400;
 }
 
 .select2-container .select2-selection {
@@ -971,7 +983,7 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
   content: "";
   left: 0;
   right: 0;
-  top: -38px;
+  top: -34px;
   display: none;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
@@ -1046,7 +1058,7 @@ html[dir=ltr] .select2-container .select2-selection .select2-selection__rendered
 .main-slide .slide-title {
   font-size: 46px;
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.48;
   margin: 0 0 30px;
 }
@@ -1769,6 +1781,9 @@ html[dir=ltr] .advsearch-items .daterangepicker {
   transition: all 0.3s ease-in-out;
   position: relative;
 }
+.gallery-mixItUp-btns button:first-of-type {
+  font-size: 15px;
+}
 .gallery-mixItUp-btns button:after {
   width: 0px;
   height: 0px;
@@ -2048,6 +2063,7 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
 .room-item .room-price span {
   -webkit-margin-start: 5px;
           margin-inline-start: 5px;
+  font-weight: 400;
 }
 .room-item .room-price strong {
   font-weight: 700;
@@ -2057,6 +2073,7 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
   text-decoration: line-through;
   -webkit-margin-start: 12px;
           margin-inline-start: 12px;
+  font-weight: 400;
 }
 .room-item .room-total {
   display: flex;
@@ -2737,6 +2754,8 @@ html[dir=ltr] .gallery-mixItUp-btns button:after {
           margin-inline-end: 5px;
 }
 .lang-cont .lang-btn .arrow {
+  display: flex;
+  align-items: center;
   -webkit-margin-start: 11px;
           margin-inline-start: 11px;
   stroke: #86959f;
@@ -3192,6 +3211,8 @@ header.fixed .logo {
 .sec-more:hover {
   background-color: rgba(94, 157, 154, 0.2);
   color: #5e9d9a;
+  color: #5e9d9a;
+  stroke: #5e9d9a;
 }
 .rooms-sec .sec-more, .specials-sec .sec-more {
   margin-top: 10px;
@@ -3644,7 +3665,7 @@ header.fixed .logo {
 }
 .resend-cont #counterText {
   color: #5e9d9a;
-  font-size: 14px;
+  font-size: 12px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -5069,7 +5090,6 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
     bottom: 0;
     width: 270px;
     z-index: 999;
-    overflow-y: auto;
     padding: 20px 15px;
     -webkit-padding-end: 10px;
             padding-inline-end: 10px;
@@ -5087,17 +5107,19 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
     inset-inline-end: 0;
   }
 }
-.archive-filters .filters-cont {
-  max-height: 100%;
-  overflow-y: auto;
-}
-.archive-filters .filters-cont::-webkit-scrollbar {
-  background-color: #edf4f2;
-  border-radius: 3.5px;
-}
-.archive-filters .filters-cont::-webkit-scrollbar-thumb {
-  background-color: rgba(94, 157, 154, 0.2);
-  border-radius: 3.5px;
+@media (max-width: 991px) {
+  .archive-filters .filters-cont {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  .archive-filters .filters-cont::-webkit-scrollbar {
+    background-color: #edf4f2;
+    border-radius: 3.5px;
+  }
+  .archive-filters .filters-cont::-webkit-scrollbar-thumb {
+    background-color: rgba(94, 157, 154, 0.2);
+    border-radius: 3.5px;
+  }
 }
 
 .rooms-grid {
@@ -7240,7 +7262,7 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
 }
 .table-cont .totals h5 span {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   -webkit-margin-start: 5.5px;
           margin-inline-start: 5.5px;
 }
