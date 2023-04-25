@@ -1437,6 +1437,7 @@ html[dir=ltr] .advsearch-items .daterangepicker {
   .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {
     float: unset;
     margin: auto;
+    direction: ltr;
   }
 }
 .daterangepicker .calendar-table td {
@@ -1460,18 +1461,8 @@ html[dir=ltr] .advsearch-items .daterangepicker {
 .daterangepicker .calendar-table td.start-date {
   border-radius: 16px 0 0 16px;
 }
-@media (max-width: 767px) {
-  html[dir=rtl] .daterangepicker .calendar-table td.start-date {
-    border-radius: 0 16px 16px 0;
-  }
-}
 .daterangepicker .calendar-table td.end-date {
   border-radius: 0 16px 16px 0;
-}
-@media (max-width: 767px) {
-  html[dir=rtl] .daterangepicker .calendar-table td.end-date {
-    border-radius: 16px 0 0 16px;
-  }
 }
 .daterangepicker .calendar-table td.start-date.end-date {
   border-radius: 16px;
