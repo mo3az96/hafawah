@@ -1492,12 +1492,21 @@ html[dir=ltr] .advsearch-items .daterangepicker {
 .daterangepicker .days-count {
   text-align: center;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #5e9d9a;
   line-height: 1.6875;
   padding: 15px 0 19px;
   clear: both;
   border-top: 1px solid #dedfeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html[dir=rtl] .daterangepicker .days-count {
+  direction: rtl;
+}
+.daterangepicker .days-count div {
+  margin: 0 2px;
 }
 .daterangepicker .days-range {
   direction: ltr;
