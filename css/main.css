@@ -6323,6 +6323,30 @@ html[dir=ltr] .chat-footer .chat-send-btn svg {
   stroke: #5e9d9a;
 }
 
+.modal .gallery-cont {
+  display: grid;
+  grid-template-columns: 3.0861fr 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+@media (max-width: 1199px) {
+  .modal .gallery-cont {
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+}
+.modal .gallery-block-body {
+  padding: 15px;
+}
+.modal .gallery-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 767px) {
+  .modal .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .book-page-grid {
   display: grid;
   grid-template-columns: 2.1217fr 1fr;
