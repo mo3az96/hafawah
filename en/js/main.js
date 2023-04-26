@@ -53,33 +53,35 @@ $(document).ready(function () {
 
   /* ************************************ flatpicker ************************************ */
 
-  $(".dateIn").flatpickr({
-    enable: [
-      {
-        from: $(".dateIn").data("from"),
-        to: $(".dateIn").data("to"),
-      },
-    ],
-  });
-  $(".dateOut").flatpickr({
-    enable: [
-      {
-        from: $(".dateOut").data("from"),
-        to: $(".dateOut").data("to"),
-      },
-    ],
-  });
+  // $(".dateIn").flatpickr({
+  //   enable: [
+  //     {
+  //       from: $(".dateIn").data("from"),
+  //       to: $(".dateIn").data("to"),
+  //     },
+  //   ],
+  //   mode: "range",
+  // });
+  // $(".dateOut").flatpickr({
+  //   enable: [
+  //     {
+  //       from: $(".dateOut").data("from"),
+  //       to: $(".dateOut").data("to"),
+  //     },
+  //   ],
+  //   mode: "range",
+  // });
 
-  $(".advsearch-date").change(function (e) {
-    if ($(this).val() == "") {
-      $(this)
-        .prev(".advsearch-item-text")
-        .find("span")
-        .text($(this).attr("placeholder"));
-    } else {
-      $(this).prev(".advsearch-item-text").find("span").text($(this).val());
-    }
-  });
+  // $(".advsearch-date").change(function (e) {
+  //   if ($(this).val() == "") {
+  //     $(this)
+  //       .prev(".advsearch-item-text")
+  //       .find("span")
+  //       .text($(this).attr("placeholder"));
+  //   } else {
+  //     $(this).prev(".advsearch-item-text").find("span").text($(this).val());
+  //   }
+  // });
   /* ************************************ QTY ************************************ */
   $(document).on("click", ".qty-plus", function (e) {
     e.preventDefault();
